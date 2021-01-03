@@ -1,9 +1,9 @@
-import Document, {Head, Main, NextScript} from "next/document";
+import Document, {Html, Head, Main, NextScript} from "next/document";
 
 export default class MyDocument extends Document {
     render() {
         return (
-            <html lang="en-US">
+            <Html lang="en-US">
                 <Head>
                     <link rel="manifest" href="manifest.json"/>
                     <meta name="mobile-web-app-capable" content="yes"/>
@@ -15,8 +15,8 @@ export default class MyDocument extends Document {
                     <meta name="apple-mobile-web-app-status-bar-style"
                           content="black-translucent"/>
                     <meta name="msapplication-starturl" content="/"/>
-                    <meta name="viewport"
-                          content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+                    {/*<meta name="viewport"*/}
+                    {/*      content="width=device-width, initial-scale=1, shrink-to-fit=no"/>*/}
 
                     <link rel="icon" type="image/png" sizes="512x512"
                           href="/icons/icon-512x512.png"/>
@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
                 <Main/>
                 <NextScript/>
             </body>
-            </html>
+            </Html>
         );
     }
 }
